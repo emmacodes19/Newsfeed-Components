@@ -33,3 +33,97 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
+const newMenu = document.querySelector('.header')
+const MenuButton = document.querySelector('.menu-button')
+
+
+
+function menuComponent(lists) {
+  const addMenu = document.createElement('div');
+  const addList = document.createElement('ul');
+
+  addMenu.appendChild(addList);
+
+  addMenu.classList.add('menu');
+  // addList.classList.add('menu-button');
+
+
+  lists.forEach ((item) => {
+    const newList = document.createElement('li');
+    newList.textContent = item;
+    addList.appendChild(newList);
+
+
+  });
+
+  // addList.appendChild(menuItems);
+
+  MenuButton.addEventListener('click', () => addMenu.classList.toggle('menu--open'));
+  return addMenu;
+
+}
+newMenu.appendChild(menuComponent(menuItems));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  // Array.forEach(item => {
+  //   let anotherList = document.createElement('li');
+  //   anotherList.textContent = item;
+  //   addList.appendChild(anotherList);
+  // })
+
+
+  // MenuButton.addEventListener('click',() => {
+  //   addMenu.classList.toggle('menu--open');
+  //   console.log('it works');
+  // })
+
+  // return addMenu;
+
+  // menuItems.forEach(() => {
+  //   header.appendChild(menuComponent(menuItems));
+  // })
+
+
+// for (let i=0; i<menuItems.length; i++) {
+//   let result = menuComponent(menuItems[i]);
+//   newMenu.appendChild(result);
+// }
+
+// menuItems.forEach((item)=> {
+//   let result = menuComponent(menuItems[i]);
+//     menuComponent.appendChild(result);
+
+// });
+
+// let resultArray = menuItems.map((item) => {
+//   let result = menuComponent(item);
+//   return result;
+// });
+
+// console.log('button', resultArray);
